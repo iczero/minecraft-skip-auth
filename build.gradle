@@ -33,6 +33,8 @@ dependencies {
 	// Quilted Fabric API will automatically pull in the correct QSL version.
 	modImplementation libs.quilted.fabric.api
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
+
+	implementation 'com.github.seancfoley:ipaddress:5.4.0'
 }
 
 processResources {
@@ -61,6 +63,14 @@ java {
 	// If this mod is going to be a library, then it should also generate Javadocs in order to aid with development.
 	// Uncomment this line to generate them.
 	// withJavadocJar()
+}
+
+loom {
+	accessWidenerPath = file("src/main/resources/skipauth.accesswidener")
+}
+
+runServer {
+	standardInput = System.in
 }
 
 // If you plan to use a different file for the license, don't forget to change the file name here!
