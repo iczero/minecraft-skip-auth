@@ -35,6 +35,7 @@ dependencies {
 	// modImplementation libs.bundles.quilted.fabric.api // If you wish to use Fabric API's deprecated modules, you can replace the above line with this one
 
 	implementation 'com.github.seancfoley:ipaddress:5.4.0'
+	include 'com.github.seancfoley:ipaddress:5.4.0'
 }
 
 processResources {
